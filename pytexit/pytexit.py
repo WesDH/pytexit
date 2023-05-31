@@ -210,7 +210,7 @@ def py2tex(
     if isinstance(pt.body[0], ast.Expr):
         # To deal with cases such as 'x=something'
         # TODO : one single command to start the visit?
-        s = Visitor.visit(pt.body[0].value)
+         s = Visitor.visit(pt.body[0].value)
     else:  # For Compare / Assign expressions
         s = Visitor.visit(pt.body[0])
 

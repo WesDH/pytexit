@@ -22,6 +22,7 @@ def test_py2tex(verbose=True, **kwargs):
         r"Re_x=(rho*v*x)/mu",
         r"2*sqrt(2*pi*k*T_e/m_e)*(DeltaE/(k*T_e))**2*a_0**2",
         r"f(x**2/y**3)",
+        r"cos(x)",
         r"arctanh(x/sqrt(x))",
         r"quad(f,0,np.inf)",
         # ------------------
@@ -39,6 +40,7 @@ def test_py2tex(verbose=True, **kwargs):
         r"$$Re_x=\frac{\rho v x}{\mu}$$",
         r"$$2\sqrt{\frac{2\pi k T_e}{m_e}} \left(\frac{\Delta E}{k T_e}\right)^2 {a_0}^2$$",
         r"$$f{\left(\frac{x^2}{y^3}\right)}$$",
+        r"$$cos\left(x\right)$$",
         r"$$\tanh^{-1}\left(\frac{x}{\sqrt{x}}\right)$$",
         r"$$\int_{0}^{\infty} f\left(u\right) du$$",
         # -------------------
