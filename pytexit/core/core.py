@@ -69,13 +69,11 @@ clear_modules = [
 
 def uprint(*expr):
     """Deals with encoding problems"""
-
-    try:
-        print(*expr)
-    except UnicodeEncodeError:
-        f = lambda expr: expr.encode(sys.stdout.encoding, errors="replace")
-        print(*list(map(f, expr)))
-
+    # try:
+    print(*expr)
+    # except UnicodeEncodeError:
+    #     f = lambda expr: expr.encode(sys.stdout.encoding, errors="replace")
+    #     print(*list(map(f, expr)))
 
 class LatexVisitor(ast.NodeVisitor):
     """
@@ -203,13 +201,13 @@ class LatexVisitor(ast.NodeVisitor):
 
         args = r"%s, %s=%s..%s" % (kw["content"], kw["iterator"], kw["min"], kw["max"])
 
-        if kwout:
-            return args, kw
-        else:
-            return args
+        # if kwout:
+        return args, kw
+        # else:
+        #     return args
 
-    def visit_list(self, n):
-        self.generic_visit(n)
+    # def visit_list(self, n):
+    #     self.generic_visit(n)
 
     def visit_Call(self, n):
         """Node details : n.args, n.func, n.keywords, n.kwargs"""
